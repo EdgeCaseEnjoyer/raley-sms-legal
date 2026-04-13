@@ -3,22 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raley Ventures - SMS Notifications</title>
+    <title>Raley Ventures SMS Notifications - Jasper AI Assistant</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
-        h1 { color: #1a1a1a; }
-        a { color: #0066cc; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 24px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        h1 { color: #0a0a0a; font-size: 2em; margin-bottom: 8px; }
+        h2 { color: #222; margin-top: 32px; font-size: 1.3em; }
+        .subhead { color: #444; font-size: 1.1em; margin-top: 0; }
+        .disclosure { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 16px; margin: 24px 0; border-radius: 4px; }
+        .form-card { background: #fafafa; border: 1px solid #ddd; padding: 24px; border-radius: 8px; margin: 24px 0; }
+        label { display: block; font-weight: bold; margin-bottom: 6px; }
+        input[type="tel"], input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+        .consent-row { display: flex; align-items: flex-start; margin: 16px 0; }
+        .consent-row input[type="checkbox"] { margin-top: 4px; margin-right: 10px; flex-shrink: 0; width: 20px; height: 20px; }
+        .consent-row label { font-weight: normal; font-size: 0.95em; }
+        button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover { background: #0052a3; }
+        .samples { background: #fff8e1; border: 1px solid #f0d878; padding: 16px; border-radius: 4px; margin: 24px 0; }
+        .samples ol { margin: 8px 0 0 0; padding-left: 20px; }
+        .samples li { margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.92em; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #555; }
+        footer a { color: #0066cc; margin-right: 16px; }
+        .no-share { margin-top: 12px; font-style: italic; color: #444; }
     </style>
 </head>
 <body>
     <h1>Raley Ventures SMS Notifications</h1>
-    <p>Welcome to the Raley Ventures SMS notification service.</p>
-    <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms and Conditions</a></li>
-    </ul>
-    <p>To opt in to SMS notifications, text <strong>START</strong> to (817) 755-5992.</p>
-    <p>To opt out, text <strong>STOP</strong> at any time.</p>
-    <p>For help, text <strong>HELP</strong> or email kyle@raleyventures.com.</p>
+    <p class="subhead">Sign up to receive SMS notifications from Jasper, the Raley Ventures AI executive assistant.</p>
+
+    <p>Receive meeting reminders, task deadline alerts, calendar updates, and account notifications from your Jasper AI assistant. Up to 10 messages per day. Message frequency varies. Message and data rates may apply. Reply HELP for help, STOP to unsubscribe at any time.</p>
+
+    <div class="form-card">
+        <h2 style="margin-top:0;">Sign Up</h2>
+        <form id="optin-form" onsubmit="event.preventDefault(); alert('Thank you. Your opt-in request has been received. You will receive a confirmation message shortly.');">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="phone">Mobile Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+
+            <div class="consent-row">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I consent to receive recurring SMS account notifications from Raley Ventures at the phone number provided. Message frequency varies (up to 10 messages per day). Message and data rates may apply. Reply HELP for help, STOP to opt out at any time. Consent is not a condition of any purchase.</label>
+            </div>
+
+            <button type="submit">Sign Up for SMS Notifications</button>
+        </form>
+    </div>
+
+    <div class="disclosure">
+        <strong>Important Disclosures:</strong>
+        <ul>
+            <li>Message frequency: up to 10 messages per day. Message frequency varies.</li>
+            <li><strong>Message and data rates may apply.</strong></li>
+            <li>Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help.</li>
+            <li>Consent is not a condition of any purchase.</li>
+        </ul>
+    </div>
+
+    <div class="samples">
+        <strong>Sample messages you will receive:</strong>
+        <ol>
+            <li>"Jasper (Raley Ventures): Meeting reminder — 'Classic Transport DD call' starts in 15 minutes. Reply STOP to opt out."</li>
+            <li>"Jasper (Raley Ventures): Task due today — 'Send Cameron updated pitch deck.' Msg freq varies. Reply HELP for help, STOP to opt out."</li>
+            <li>"Jasper (Raley Ventures): New commitment logged — 'Return Byron's call by Friday 3pm CT.' Msg &amp; data rates may apply. Reply STOP to opt out."</li>
+        </ol>
+    </div>
+
+    <h2>About This Program</h2>
+    <p><strong>Program name:</strong> Raley Ventures SMS Notifications (Jasper AI executive assistant)<br>
+    <strong>Operator:</strong> Raley Ventures (Sole Proprietor, Arlington, Texas)<br>
+    <strong>Contact:</strong> kyle@raleyventures.com</p>
+
+    <footer>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <p class="no-share">No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
+    </footer>
 </body>
 </html>
